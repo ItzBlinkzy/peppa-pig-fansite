@@ -1,4 +1,4 @@
-# Peppa-Pig-Fansite
+# peppa-pig-fansite
 
 * A very basic fan website of Peppa Pig using HTML and CSS
   
