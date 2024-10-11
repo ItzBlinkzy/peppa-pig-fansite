@@ -1,0 +1,518 @@
+
+:root {
+    --text-white: rgb(205, 218, 218);
+    --pale-pink: rgb(246, 210, 224);
+    --light-blue: rgb(11, 153, 248);
+    --dark-blue: rgb(6, 113, 183);
+    --midnight-blue: rgb(0, 63, 125);
+    --light-pink: rgb(255, 106, 180);
+    --dark-pink: rgb(174, 3, 99);
+    --pale-orange: rgb(236, 193, 74);
+    --light-orange: rgb(235, 140, 36);
+    --brownish-orange: rgb(206, 115, 17);
+}
+
+
+@font-face {
+    font-family: "PeppaBold";
+    src: url("./fonts/PeppaBold.ttf");
+}
+html {
+    font-size: 2.5em;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    /* border-style: dotted; */
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "PeppaBold";
+}
+
+/*
+CSS Resetting Defaults + styling default tags
+*/
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1em;
+    color: var(--light-orange);
+    /* -webkit-text-fill-color: rgb(255, 106, 180);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;  */
+}
+
+h3 {
+    font-size: 0.7em;
+    color: var(--light-orange);
+}
+
+
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+nav {
+    width: 100%;
+    background-color: var(--light-blue);
+    padding-left: 30px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+main {
+    background-color: var(--dark-blue);
+    display: flex;
+    position: absolute;
+    flex-flow: column;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+footer {
+    font-size: 0.5em;
+}
+
+a {
+    color: inherit;
+}
+/* ----------------------------------------------------------------------------------------------*/
+/* index.html and navbar */
+
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 3em;
+}
+
+
+.logo {
+    display: inline-block;
+}
+
+.nav-links {
+    list-style: none;
+    font-style: italic;
+    display: flex;
+}
+
+.nav-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    -webkit-text-fill-color: var(--light-pink);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; 
+}
+
+
+.logo img {
+    height: 2.7em;
+    margin-top: 10px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.paragraph {
+    font-size: 0.7em;
+    padding: 0.5em;
+}
+
+.video-container {
+    margin-bottom: 20px;
+    display: grid;
+    justify-content: center;
+}
+
+.video-container iframe {
+    height: 360px;
+    width: 640px;
+    border: 5px solid var(--light-orange);
+    border-radius: 10px;
+}
+
+.character-container {
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--midnight-blue);
+    margin: 1em;
+    border: 3px solid var(--light-orange);
+    border-radius: 10px;
+    box-shadow: 13px 14px 20px 0px rgba(0,0,0,0.48);
+
+}
+
+.img-container img {
+    max-width: 140px;
+    max-height: 140px;
+    width: 3.5em;
+    height: 3.5em;
+}
+
+
+.character-info {
+    font-size: 0.6em;
+    margin-left: 1em;
+    flex-basis: 90%;
+    color: var(--text-white)
+}
+
+.character-name {
+    flex-basis: 10%;
+    min-width: 3em;
+}
+
+
+/* ----------------------------------------------------------------------------------------------*/
+/* resources.html */
+
+.resources-table {
+    border-collapse: separate;
+    border-spacing: 30px;
+    background-color: var(--midnight-blue);
+    margin: 1em auto;
+    border: 5px solid var(--brownish-orange);
+    border-radius: 10px;
+    width: 90%;
+}
+
+.resources-table td {
+    background-color: var(--pale-orange);
+    border: 5px solid white;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.resources-table td img {
+    max-width: 200px;
+    max-height: 200px;
+    width: 3.5em;
+    height: 3.5em;
+}
+
+
+.resources-btn {
+    color: initial;
+}
+
+.resources-btn:hover {
+    transform: scale(0.98);
+    transition: 100ms;
+}
+
+/* --------------------------------------------------------------------------- /*
+/* resourcesflex.html No tables - Responsive layout of resources page using flexbox (works better for mobile devices) */
+
+.merch-container {
+    display: flex;
+    margin: .5em;
+    border-radius: 5px;
+    column-gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    outline: 4px solid var(--light-orange);
+    background: var(--midnight-blue);
+}
+
+.merch-item {
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    min-width: 12rem;
+    border: 5px solid white;
+    padding: 0.3rem 0;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--pale-orange);
+    width: 5rem;
+    box-shadow: .5rem .5rem 1rem  rgba(0, 0, 0, 0.542)
+
+}
+
+.merch-item a img {
+    height: 5rem;
+}
+
+.merch-item a img:hover {
+    transform: scale(1.2);
+    transition: 250ms;
+}
+
+.merch-item p {
+    color: black;
+}
+
+.merch-item h2 {
+    color: var(--brownish-orange);
+}
+
+ 
+
+/* ----------------------------------------------------------------------------------------------*/
+/* competition.html */
+
+.centered-h {
+    text-align: center;
+
+}
+
+.form-container {
+    padding: 0.2em;
+    display: flex;
+    width: 95%;
+    border-radius: 10px;
+    border: 5px solid var(--light-orange);
+    background-color: var(--midnight-blue);
+    margin: auto;
+    box-shadow: 13px 14px 20px 0px rgba(0,0,0,0.48);
+
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.input-text, .radio-text, #text-entry textarea, input, .dropdown select {
+    font-size: 0.5em;
+    font-family: inherit;
+}
+
+
+#text-entry {
+    margin-top: 15px;
+}
+
+#text-entry textarea {
+    background-color: var(--pale-pink);
+    border: 2px solid var(--dark-pink);
+    border-radius: 3px;
+    vertical-align: middle;
+    width: 20em;
+    height: 5em;
+    resize: none;
+}
+
+
+input, select {
+    background-color: var(--pale-pink);
+    border: 2px solid var(--dark-pink);
+    align-items: center;
+    border-radius: 3px;
+}
+
+.dropdown select {
+    background-color: var(--pale-pink);
+    border: 2px solid var(--dark-pink);
+}
+.dropdown select:hover, .submit-reset-btn:hover, #bday:hover, input[type="file"]:hover{
+    cursor: pointer;
+}
+
+.input-text {
+    /* background-color: rgb(118, 118, 255); */
+    display: inline-block;
+    width: 10em;
+    margin-right: 1em;
+}
+
+
+/* ----------------------------------------------------------------------------------------------*/
+/* contact.html | Three column layout, equal distribution */
+
+
+#contact-heading {
+    text-align: center;
+}
+
+.column-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.column {
+    padding: 1rem;
+    height: 10rem;
+    font-size: 0.6em;
+    width: 8rem;
+    margin: 5px;
+    border: 5px solid var(--light-orange);
+    background-color: var(--midnight-blue);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--text-white);
+    box-shadow: 13px 14px 20px 0px rgba(0,0,0,0.48);
+}
+
+.column h2 {
+    color: var(--pale-orange);
+}
+.column img {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto
+}
+
+.column div:hover {
+    transform: scale(1.2);
+    transition: 300ms;
+}
+
+
+/* ---------------------------------------------------------------------------/*
+/* faq.html | Using a common accordion style dropdown menu to display FAQs */ 
+
+#faq-heading {
+    margin-left: 1em;
+}
+
+.faq-container {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+
+.faq-item {
+    background-color: var(--midnight-blue);
+    border: 2px solid black;
+    padding: 0.3em;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 13px 14px 20px 0px rgba(0,0,0,0.48);
+}
+
+.faq-link {
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 0.3em;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.8em;
+    font-size: 0.8em;
+    text-decoration: none;
+    border: 3px solid white;
+    color: black;
+    background-color: var(--light-orange);
+    width: 100%;
+}
+
+ .faq-link i {
+    padding: .5rem;
+}
+
+.faq-link .fa-minus {
+    display: none;
+}
+
+.answer {
+    overflow: hidden;  /* Preventing the text from overflowing */       
+    max-height: 0; /* Hide answer element before it's clicked */
+    border-radius: 10px;
+    background-color: var(--pale-orange);
+    transition: max-height 650ms;
+    position: relative;
+}
+
+.answer p {
+    font-size: 0.6em;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.faq-item:target .answer {
+    max-height: 10em;
+}
+
+.faq-item:target .faq-link .fa-minus {
+    display: block;
+}
+
+.faq-item:target .faq-link .fa-plus {
+    display: none;
+} 
+.nav-item {
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 0.2em;
+}
+.nav-item:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: background-color 0.15s ease-in;
+}
+
+.selected-page {
+    border: 3px solid black;
+    background-color: white;
+}
+
+
+/* ---------------------------------------------------------------------------/*
+/* Media Queries making website slightly responsive on mobile devices (still some issues) */
+
+
+/* navbar */
+@media screen and (max-width: 814px) {
+    .nav-links {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .logo {
+        display: none;
+    }
+    html {
+        font-size: 1.8em;
+    }
+    
+    .nav-links {
+        font-size: 0.5em;
+    }
+    .nav-item a {
+        -webkit-text-fill-color: var(--dark-pink);
+        -webkit-text-stroke-color: transparent; 
+    }
+}
+
+/* contact.html | 1 per row on mobile devices */
+@media (min-width: 900px) {
+    .column-container { grid-template-columns: repeat(3, 1fr); }
+}

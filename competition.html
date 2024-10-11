@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peppa Pig</title>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar">
+            <a href="https://www.peppapig.com/" class="logo">
+                <img src="./images/Peppa_Pig_logo.png" alt="Peppa Pig Logo">
+            </a>
+
+            <ul class="nav-links">
+                <li class="nav-item"><a href="./index.html">Home</a></li>
+                <li class="nav-item"><a href="./resources.html">Resources</a></li>
+                <li class="nav-item selected-page"><a href="./competition.html">Competition</a></li>
+                <li class="nav-item"><a href="./contact.html">Contact Us</a></li>
+                <li class="nav-item"><a href="./faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-container">
+            <h2 class="centered-h">New Competition!</h2>
+            <div class="paragraph centered">
+                <p>We are hosting our monthly competition for all Peppa Pig fans to enter. We are looking for the best
+                    Peppa Pig Fanart, enter your details and answer some questions below for a chance to win some of our
+                    merch.</p>
+            </div>
+
+            <h2 class="centered-h">Enter Below</h2>
+            <div class="form-container">
+
+                <form action="https://webdevcit.com/displayvalues.php" method="post">
+                    <div class="input-container">
+                        <span class="input-text">Name:</span>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="input-container">
+                        <span class="input-text">Email:</span>
+                        <input type="email" name="email" autocomplete="on" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label class="input-text">Number:</label>
+                        <input type="tel" name="number" required>
+                    </div>
+
+                    <div class="dropdown">
+                        <span class="input-text">Preferred Contact:</span>
+                        <select name="contact_method" required>
+                            <option value="" selected disabled hidden>Choose Method</option>
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                            <option value="whatsapp">WhatsApp</option>
+                            <option value="text">Text</option>
+                        </select>
+                    </div>
+
+                    <div class="input-container">
+                        <span class="input-text">Date of Birth:</span>
+                        <input type="date" name="birthday" id="bday" min="1920-01-01" required>
+                    </div>
+
+
+                    <div id="receive-updates">
+                        <span class="input-text">Receive Updates:</span>
+                        <input type="radio" value="Yes" name="receive_updates">
+                        <span class="radio-text">Yes</span>
+                        <input type="radio" value="No" name="receive_updates" checked required>
+                        <span class="radio-text">No</span>
+
+
+                    </div>
+
+                    <div class="dropdown">
+                        <span class="input-text">Favourite Character:</span>
+                        <select name="favourite_character" required>
+                            <option value="" selected disabled hidden>Choose Character</option>
+                            <option value="Peppa Pig">Peppa Pig</option>
+                            <option value="George Pig">George Pig</option>
+                            <option value="Mummy Pig">Mummy Pig</option>
+                            <option value="Daddy Pig">Daddy Pig</option>
+                            <option value="Grandpa Pig">Grandpa Pig</option>
+                            <option value="Granny Pig">Granny Pig</option>
+                            <option value="Susy Sheep">Suzy Sheep</option>
+                            <option value="Rebecca Rabbit">Rebecca Rabbit</option>
+                            <option value="Miss Rabbit">Miss Rabbit</option>
+
+                        </select>
+                    </div>
+
+                    <div id="text-entry">
+                        <span class="input-text">Favourite Episode and Why?</span>
+                        <textarea placeholder="My favourite episode is..." name="favourite_episode"></textarea>
+                    </div>
+
+                    <div class="input-container">
+                        <span class="input-text">Submit Picture:</span>
+                        <input type="file" id="picture" accept="image/png, image/jpeg, image/jpg" required name="file">
+                    </div>
+                    <input type="reset" value="Cancel" class="submit-reset-btn">
+                    <input type="submit" value="Submit" class="submit-reset-btn">
+
+                </form>
+            </div>
+        </div>
+        <footer class="row-footer">
+            <p>&copy; 2022 Web Development Fundamentals</p>
+        </footer>
+    </main>
+
+</body>
+
+</html>
