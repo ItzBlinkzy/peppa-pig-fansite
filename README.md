@@ -1,6 +1,6 @@
 # Peppa-Pig-Fansite
 
-* A very basic fan website of Peppa Pig using HTML, CSS, JS
+* A very basic fan website of Peppa Pig using HTML and CSS
   
 *_This site was made for a web development module in college._*
 
